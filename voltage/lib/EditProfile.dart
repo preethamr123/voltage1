@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/PaymentFailed.dart';
+import 'package:voltage/main.dart';
 
 class EditProfile extends StatelessWidget {
   const EditProfile({Key? key}) : super(key: key);
@@ -899,7 +900,7 @@ class EditProfile extends StatelessWidget {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) =>
-                              PaymentFailed()),
+                              voltage()),
                         );
                       },
                       child: Text(

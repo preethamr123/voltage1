@@ -25,7 +25,24 @@ class PaymentFailed extends StatelessWidget {
               color: Color(0xFFA1A7AC),
             ),
           ),
-
+          Padding(
+            padding: const EdgeInsets.fromLTRB(0.0, 220, 0.0, 0.0),
+            child: Container(
+              child: Center(
+                child: MaterialButton(
+                  onPressed: () {},
+                  shape: CircleBorder(),
+                  color: Color(0XFFFCD9D9),
+                  padding: EdgeInsets.all(20),
+                  child: Icon(
+                    Icons.close_outlined,
+                    size: 45,
+                    color: Color(0XFFFF4E4E),
+                  ),
+                ),
+              ),
+            ),
+          ),
           Padding(
             padding: const EdgeInsets.fromLTRB(0.0, 20, 0.0, 0.0),
             child: Container(

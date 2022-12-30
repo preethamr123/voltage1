@@ -1,20 +1,22 @@
 import 'package:flutter/material.dart';
-import 'package:voltage/SecondQuestion.dart';
-import 'package:voltage/Trail.dart';
+import 'package:voltage/FourthQuestion.dart';
+import 'package:voltage/ThankYou.dart';
+
+
 
 void main() => runApp(MaterialApp(
-  home: FirstQuestion(),
+  home: FifthQuestion(),
 ));
 
-class FirstQuestion extends StatefulWidget {
-  const FirstQuestion({Key? key}) : super(key: key);
+class FifthQuestion extends StatefulWidget {
+  const FifthQuestion({Key? key}) : super(key: key);
 
   @override
-  State<FirstQuestion> createState() => _FirstQuestionState();
+  State<FifthQuestion> createState() => _FifthQuestionState();
 }
 
-class _FirstQuestionState extends State<FirstQuestion> {
-  double _initial = 0.2;
+class _FifthQuestionState extends State<FifthQuestion> {
+  double _initial = 1;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +54,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                   ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (BuildContext context) => MyApp()));
+                        builder: (BuildContext context) => FourthQuestion()));
                   },
                 ),
               ),
@@ -68,7 +70,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Lets Start',
+                            'And we are Done',
                             style: TextStyle(
                                 color: Colors.teal,
                                 fontSize: 20,
@@ -97,7 +99,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                             height: 50,
 //color: Colors.grey,
                             child: Text(
-                              '1.Lorem Ipsum is simply dummy text and typesetting industry ?',
+                              '5.Lorem Ipsum is simply dummy text and typesetting industry ?',
                               style: TextStyle(
                                   color: Colors.teal[400], fontSize: 18),
                             ),
@@ -237,41 +239,31 @@ class _FirstQuestionState extends State<FirstQuestion> {
                               height: 50,
                               color: Colors.transparent,
                             ),
-                            Row(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Expanded(
-                                  flex: 2,
-                                  child: Container(
-                                    alignment: Alignment.centerLeft,
-                                    child: Text(
-                                      '2.Lorem Ipsum is simply dummy text and typesetting industry ?',
-                                      style: TextStyle(
-                                        fontSize: 18,
-                                        color: Colors.black12,
-                                      ),
-                                    ),
-                                  ),
-                                ),
-                                Padding(
-                                  padding: const EdgeInsets.all(8.0),
-                                  child: Container(
-                                    alignment: Alignment.topRight,
-                                    child: IconButton(
-                                      icon: Icon(
-                                        Icons.arrow_forward_ios_outlined,
-                                        color: Colors.black26,
-                                        size: 20,
-                                      ),
-                                      onPressed: () => Navigator.of(context)
-                                          .pushReplacement(MaterialPageRoute(
-                                          builder: (BuildContext context) =>
-                                             SecondQuestion())),
-                                    ),
-                                  ),
-                                ),
-                              ],
+                            SizedBox(
+                              height: 25,
                             ),
+                            Container(
+                              width: MediaQuery.of(context).size.width,
+                              height: 50,
+                              child: ElevatedButton(
+                                child: Text(
+                                  'Finish',
+                                  style: TextStyle(
+                                      color: Colors.white, fontSize: 18),
+                                ),
+                                onPressed: () {
+                                  Navigator.of(context).pushReplacement(
+                                      MaterialPageRoute(
+                                          builder: (BuildContext context) =>
+                                              ThankYou()));
+                                },
+                                style: ElevatedButton.styleFrom(
+                                    primary: Colors.teal,
+                                    shape: RoundedRectangleBorder(
+                                      borderRadius: BorderRadius.circular(11),
+                                    )),
+                              ),
+                            )
                           ]),
                         ),
                       ]))

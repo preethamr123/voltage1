@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/FirstQuestion.dart';
+import 'package:voltage/ThirdQuestion.dart';
 
 
 
@@ -267,7 +268,7 @@ class _SecondQuestionState extends State<SecondQuestion> {
                                       onPressed: () => Navigator.of(context)
                                           .pushReplacement(MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                              SecondQuestion())),
+                                              ThirdQuestion())),
                                     ),
                                   ),
                                 ),

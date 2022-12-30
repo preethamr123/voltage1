@@ -1,19 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/FirstQuestion.dart';
-import 'package:voltage/PaymentFailed.dart';
+import 'package:voltage/MyProfile.dart';
+
 
 void main() => runApp(MaterialApp(
   home: MyApp(),
 ));
 
-class MyApp extends StatefulWidget {
+class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyApp> createState() => _MyApp();
-}
-
-class _MyApp extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -66,7 +62,7 @@ class _MyApp extends State<MyApp> {
                             onPressed: () => Navigator.of(context)
                                 .pushReplacement(MaterialPageRoute(
                                 builder: (BuildContext context) =>
-                                    MyApp())),
+                                    MyProfile())),
                           ),
                         ),
                       ),

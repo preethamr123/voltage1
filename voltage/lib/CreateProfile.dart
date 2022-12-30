@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:voltage/PaymentFailed.dart';
+import 'package:voltage/Survey.dart';
 
 
 class CreateProfile extends StatefulWidget {
@@ -907,7 +908,7 @@ class _CreateProfileState extends State<CreateProfile> {
                         Navigator.push(
                           context,
                           MaterialPageRoute(builder: (BuildContext context) =>
-                              PaymentFailed()),
+                              Survey()),
                         );
                       },
                       child: Text(

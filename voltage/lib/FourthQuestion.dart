@@ -1,20 +1,21 @@
 import 'package:flutter/material.dart';
-import 'package:voltage/SecondQuestion.dart';
-import 'package:voltage/Trail.dart';
+import 'package:voltage/FifthQuestion.dart';
+import 'package:voltage/ThirdQuestion.dart';
+
 
 void main() => runApp(MaterialApp(
-  home: FirstQuestion(),
+  home: FourthQuestion(),
 ));
 
-class FirstQuestion extends StatefulWidget {
-  const FirstQuestion({Key? key}) : super(key: key);
+class FourthQuestion extends StatefulWidget {
+  const FourthQuestion({Key? key}) : super(key: key);
 
   @override
-  State<FirstQuestion> createState() => _FirstQuestionState();
+  State<FourthQuestion> createState() => _FourthQuestionState();
 }
 
-class _FirstQuestionState extends State<FirstQuestion> {
-  double _initial = 0.2;
+class _FourthQuestionState extends State<FourthQuestion> {
+  double _initial = 0.8;
 
   @override
   Widget build(BuildContext context) {
@@ -52,7 +53,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                   ),
                   onPressed: () {
                     Navigator.of(context).pushReplacement(MaterialPageRoute(
-                        builder: (BuildContext context) => MyApp()));
+                        builder: (BuildContext context) => ThirdQuestion()));
                   },
                 ),
               ),
@@ -68,7 +69,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                         Padding(
                           padding: const EdgeInsets.all(8.0),
                           child: Text(
-                            'Lets Start',
+                            'One' ' ' 'More',
                             style: TextStyle(
                                 color: Colors.teal,
                                 fontSize: 20,
@@ -97,7 +98,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                             height: 50,
 //color: Colors.grey,
                             child: Text(
-                              '1.Lorem Ipsum is simply dummy text and typesetting industry ?',
+                              '4.Lorem Ipsum is simply dummy text and typesetting industry ?',
                               style: TextStyle(
                                   color: Colors.teal[400], fontSize: 18),
                             ),
@@ -245,7 +246,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                   child: Container(
                                     alignment: Alignment.centerLeft,
                                     child: Text(
-                                      '2.Lorem Ipsum is simply dummy text and typesetting industry ?',
+                                      '5.Lorem Ipsum is simply dummy text and typesetting industry ?',
                                       style: TextStyle(
                                         fontSize: 18,
                                         color: Colors.black12,
@@ -266,7 +267,7 @@ class _FirstQuestionState extends State<FirstQuestion> {
                                       onPressed: () => Navigator.of(context)
                                           .pushReplacement(MaterialPageRoute(
                                           builder: (BuildContext context) =>
-                                             SecondQuestion())),
+                                              FifthQuestion())),
                                     ),
                                   ),
                                 ),
